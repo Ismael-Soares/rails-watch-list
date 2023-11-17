@@ -1,0 +1,16 @@
+<h1>home movies</h1>
+<ul>
+<% @lists.each  do|list| %>
+ <li><%= link_to list.name, list_path(list) %></li>
+<% end %>
+</ul>
+<%= link_to "Criar nova lista", new_list_path %>
+
+<%#
+Um usuário pode ver todas as listas
+GET "lists"
+Um usuário pode ver os detalhes de uma determinada lista e seu nome
+GET "lists/42"
+Um usuário pode criar uma nova lista
+GET "lists/new"
+POST "lists" %>
