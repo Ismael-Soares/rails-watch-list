@@ -1,2 +1,3 @@
 <%# detalhes lista e nome %>
 <h1><%= @list.name %></h1>
+<%= link_to "delete", list_path(@list.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
